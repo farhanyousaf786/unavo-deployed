@@ -27,12 +27,6 @@ app.use("/", userRoutes);
 app.get("/", (req, res) => res.send("Hello from Express"));
 app.all("*", (req, res) => res.send("route does not exsits"));
 
-//static files
-// app.use(express.static(path.join(__dirname, "./build")));
-
-// app.get("*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "./build/index.html"));
-// });
 
 // "catch all" route
 app.get("/*", function (req, res) {
