@@ -20,10 +20,10 @@ export const auth = async (req, res) => {
 
   await axios
     .post("https://www.vcareapi.com:8080/authenticate", {
-      vendor_id: "MaxSip",
-      username: "MaxSipUser",
-      password: "MaxSipbtK123hyutrw22",
-      pin: "987659876522",
+      vendor_id: "Demo-MaxSip",
+      username: "Demo-MaxSipUser",
+      password: "Demo-MaxSipbtK123hyutrw22",
+      pin: "Demo-987659876522",
       agent_id: "ewebsiteapi",
       source: "WEBSITE",
     })
