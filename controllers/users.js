@@ -785,3 +785,20 @@ export const createCustomer = async (req, res) => {
       res.send(response.data);
     });
 };
+
+export const googleAutoFillMap = async (req, res) => {
+  console.log(">>>>>: " + req.body.input + " > " + req.body.apiKey);
+
+  await axios
+    .post(
+      `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${req.body.input}&key=${req.body.apiKey}`
+    )
+    .then(function (response) {
+      console.log("1 this is respnse from Server:>>>>>", response);
+      res.send(response);
+    })
+    .catch(function (error) {
+      console.log("1 Error respnse from Server:>", error);
+      res.send(response.data);
+    });
+};

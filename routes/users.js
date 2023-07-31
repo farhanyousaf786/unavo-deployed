@@ -13,6 +13,7 @@ import {
   verifyACP,
   getPlanList,
   createCustomer,
+  googleAutoFillMap
 } from "../controllers/users.js";
 
 const router = express.Router();
@@ -30,5 +31,7 @@ router.post("/eligibiltyStatusCheck", eligibiltyStatusCheck);
 router.post("/verifyACP", verifyACP);
 router.post("/getPlanList", getPlanList);
 router.post("/createCustomer", createCustomer);
+router.post("/googleAutoFillMap", googleAutoFillMap);
+
 
 export default router;
